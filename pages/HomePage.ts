@@ -1,0 +1,2 @@
+import {Page,expect} from '@playwright/test';
+export class HomePage {constructor(private page:Page){} async open(){await this.page.goto('/');await expect(this.page.locator('body')).toBeVisible();} async signupLogin(){await this.page.getByRole('link',{name:/signup \/ login/i}).click();} async products(){await this.page.getByRole('link',{name:/products/i}).first().click();} async contact(){await this.page.getByRole('link',{name:/contact us/i}).click();} async verifyHome(){await expect(this.page).toHaveURL(/automationexercise\.com\/?$/);} }

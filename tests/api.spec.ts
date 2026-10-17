@@ -1,0 +1,3 @@
+import {test,expect} from '@playwright/test';
+test('GET product list API',async({request})=>{const response=await request.get('https://automationexercise.com/api/productsList');expect(response.ok()).toBeTruthy();const data=await response.json();expect(data.products).toBeInstanceOf(Array);expect(data.products.length).toBeGreaterThan(0);});
+test('POST product search API',async({request})=>{const response=await request.post('https://automationexercise.com/api/searchProduct',{form:{search_product:'top'}});expect(response.ok()).toBeTruthy();const data=await response.json();expect(data.products).toBeInstanceOf(Array);});

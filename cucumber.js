@@ -1,0 +1,1 @@
+module.exports = { default: {requireModule:['ts-node/register'],require:['bdd/support/**/*.ts','bdd/steps/**/*.ts'],paths:['bdd/features/**/*.feature'],format:['progress','html:cucumber-report.html']} };

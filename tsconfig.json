@@ -1,0 +1,1 @@
+{"compilerOptions":{"target":"ES2022","module":"commonjs","moduleResolution":"node","strict":true,"esModuleInterop":true,"types":["node","@playwright/test"],"skipLibCheck":true},"include":["pages","tests","utils","bdd","playwright.config.ts"]}
